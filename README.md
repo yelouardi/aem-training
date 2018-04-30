@@ -1,7 +1,7 @@
 #AEM Training TP1
 
 # Architecture 
- AEM ce compose d’une série des Framework Open Source comme : 
+ AEM ce compose d’une série des Frameworks Open Source comme : 
 
     # Apache  Sling : 
         Apache Sling ™ est un framework pour les applications web RESTful basé sur un arbre de contenu extensible.
@@ -15,7 +15,8 @@
             disponible. Par exemple, une requête AJAX réclame du JSON, une application Java demande du XML, un navigateur Web veut du HTML.
              Pour répondre à ceci, on pourra créer différents services de représentation et rendu pour chaque type de ressource.
 
-            - Communication sans état (stateless). REST est lui-même stateless, il n’utilise pas de cookies et ses clients doivent se ré-authentifier à chaque requête.
+            - Communication sans état (stateless). REST est lui-même stateless,
+             il n’utilise pas de cookies et ses clients doivent se ré-authentifier à chaque requête.
 
     # JCR : 
         Gestion des contenus : Java Content Repository 'API d'entrepôt documentaire standard appelée aussi JSR 283 
