@@ -1,6 +1,10 @@
 #AEM Training TP1
 
 # Architecture 
+
+Granit
+======
+
  AEM ce compose d’une série des Frameworks Open Source comme : 
 
 Apache  Sling 
@@ -47,6 +51,37 @@ Apache Felix
         qui est une implémentation de la plateforme OSGI fournissant une console d’administration 
         et une API permettant notamment de créer facilement des bundles OSGI et d’interagir avec 
         le code déployés (notions de servlets, de services, etc.).
+
+
+
+
+Environments
+============
+
+Author
+------------
+
+Ceux-ci interagissent pour vous permettre de rendre le contenu disponible sur votre site Web afin que vos visiteurs puissent le lire.
+
+L'environnement auteur fournit les mécanismes pour créer, mettre à jour et réviser ce contenu avant de le publier:
+
+Un auteur crée et examine le contenu (il peut être de plusieurs types, par exemple, des pages, des éléments, des publications, etc.)
+qui, à un moment donné, sera publié sur votre site Web.
+
+
+Publish
+------------
+
+Pour l'environnement de publication, vous concevez tout l'aspect de l'interface mise à la disposition de vos utilisateurs.
+
+Dispatcher
+---------------
+
+Pour optimiser les performances des visiteurs de votre site Web, le répartiteur implémente l'équilibrage de la charge et la mise en cache.
+
+
+https://helpx.adobe.com/experience-manager/6-3/sites/authoring/using/author.html
+
 
 
 Good Learning 
