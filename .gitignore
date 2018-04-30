@@ -12,3 +12,4 @@ tmp
 *.prefs
 *.settings
 *.vscode
+**/bin/
