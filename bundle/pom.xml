@@ -85,7 +85,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Bundle-SymbolicName>com.mycompany.myproject.htl.htl-bundle</Bundle-SymbolicName>
+                        <Bundle-SymbolicName>com.aem.trainig.first-bundle</Bundle-SymbolicName>
                     </instructions>
                 </configuration>
             </plugin>

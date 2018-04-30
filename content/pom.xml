@@ -22,7 +22,7 @@
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>htl-bundle</artifactId>
+            <artifactId>first-bundle</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
@@ -57,7 +57,7 @@
                     <embeddeds>
                         <embedded>
                             <groupId>${project.groupId}</groupId>
-                            <artifactId>htl-bundle</artifactId>
+                            <artifactId>first-bundle</artifactId>
                             <target>/apps/first/install</target>
                         </embedded>
                     </embeddeds>
