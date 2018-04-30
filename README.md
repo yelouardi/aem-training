@@ -2,7 +2,7 @@
 
 # Creation Firt Project 
 
- mvn archetype:generate -DarchetypeRepository=https://repo.adobe.com/nexus/content/groups/public/ -DarchetypeGroupId=com.day.jcr.vault -DarchetypeArtifactId=multimodule-content-package-archetype -DarchetypeVersion=1.0.2 -DgroupId=com.mycompany.myproject.htl -DartifactId=htl -Dversion=1.0-SNAPSHOT -Dpackage=com.aem.training -DappsFolderName=first -DartifactName="My First Project" -DcqVersion="5.6.1" -DpackageGroup="AEM TRAINING"
+ mvn archetype:generate -DarchetypeRepository=https://repo.adobe.com/nexus/content/groups/public/ -DarchetypeGroupId=com.day.jcr.vault -DarchetypeArtifactId=multimodule-content-package-archetype -DarchetypeVersion=1.0.2 -DgroupId=com.aem.training -DartifactId=first -Dversion=1.0-SNAPSHOT -Dpackage=com.aem.training -DappsFolderName=first -DartifactName="My First Project" -DcqVersion="5.6.1" -DpackageGroup="AEM TRAINING"
 
 
 My First Project
