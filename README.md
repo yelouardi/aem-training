@@ -10,7 +10,10 @@
             - Orienté ressources : chaque bribe d’informations comme un libellé, une actualité, une description de produit, un fichier ou une image par exemple est une ressource (« everything is content »)
             - Les ressources sont adressables et accessibles en REST via le protocole http. Chaque ressource possède une URI spécifique.
             - REST est un protocole normé, on utilise simplement les méthodes fournies comme GET, POST, PUT ou DELETE pour interagir avec le contenu.
-            - Orienté représentation : un objet est référencé par une unique URI mais avoir différents formats de représentation disponible. Par exemple, une requête AJAX réclame du JSON, une application Java demande du XML, un navigateur Web veut du HTML. Pour répondre à ceci, on pourra créer différents services de représentation et rendu pour chaque type de ressource.
+            - Orienté représentation : un objet est référencé par une unique URI mais avoir différents formats de représentation 
+            disponible. Par exemple, une requête AJAX réclame du JSON, une application Java demande du XML, un navigateur Web veut du HTML.
+             Pour répondre à ceci, on pourra créer différents services de représentation et rendu pour chaque type de ressource.
+             
             - Communication sans état (stateless). REST est lui-même stateless, il n’utilise pas de cookies et ses clients doivent se ré-authentifier à chaque requête.
 
     # JCR : 
