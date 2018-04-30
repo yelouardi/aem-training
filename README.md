@@ -1,39 +1,37 @@
 #AEM Training TP2
 
-# Creation Firt Project 
+# Création du nouveau projet 
 
  mvn archetype:generate -DarchetypeRepository=https://repo.adobe.com/nexus/content/groups/public/ -DarchetypeGroupId=com.day.jcr.vault -DarchetypeArtifactId=multimodule-content-package-archetype -DarchetypeVersion=1.0.2 -DgroupId=com.aem.training -DartifactId=first -Dversion=1.0-SNAPSHOT -Dpackage=com.aem.training -DappsFolderName=first -DartifactName="My First Project" -DcqVersion="5.6.1" -DpackageGroup="AEM TRAINING"
 
 My First Project
 ========
 
-This a content package project generated using the multimodule-content-package-archetype.
+Ce projet de package de contenu généré à l'aide du multimodule-content-package-archetype.
 
 Building
 --------
 
-This project uses Maven for building. Common commands:
+Ce projet utilise Maven pour la construction. Commandes courantes:
 
-From the root directory, run ``mvn -PautoInstallPackage clean install`` to build the bundle and content package and install to a CQ instance.
+À partir du répertoire racine, exécutez `` mvn -PautoInstallPackage clean install`` pour créer le paquetage de bundle et de contenu et l'installer sur une instance CQ.
 
-From the bundle directory, run ``mvn -PautoInstallBundle clean install`` to build *just* the bundle and install to a CQ instance.
+A partir du répertoire du bundle, lancez `` mvn -PautoInstallBundle clean install`` pour construire * juste * le paquet et l'installer dans une instance CQ.
 
 Using with VLT
 --------------
 
-To use vlt with this project, first build and install the package to your local CQ instance as described above. Then cd to `content/src/main/content/jcr_root` and run
+Pour utiliser vlt avec ce projet, commencez par créer et installer le package sur votre instance CQ locale, comme décrit ci-dessus. Puis cd dans `content / src / main / content / jcr_root` et lancez
 
     vlt --credentials admin:admin checkout -f ../META-INF/vault/filter.xml --force http://localhost:4502/crx
 
-Once the working copy is created, you can use the normal ``vlt up`` and ``vlt ci`` commands.
+Une fois la copie de travail créée, vous pouvez utiliser les commandes normales `` vlt up`` et `` vlt ci``.
 
 Specifying CRX Host/Port
 ------------------------
 
 The CRX host and port can be specified on the command line with:
 mvn -Dcrx.host=otherhost -Dcrx.port=5502 <goals>
-
-
 
 
 https://helpx.adobe.com/experience-manager/using/first-arch10.html
