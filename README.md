@@ -7,7 +7,8 @@
         Apache Sling ™ est un framework pour les applications web RESTful basé sur un arbre de contenu extensible.
         Sling mappe les URL de requête HTTP aux ressources de contenu en fonction du chemin, de l'extension et des sélecteurs de la requête. 
         Les principes d’une architecture Web RESTful sont :
-            - Orienté ressources : chaque bribe d’informations comme un libellé, une actualité, une description de produit, un fichier ou une image par exemple est une ressource (« everything is content »)
+            - Orienté ressources : chaque bribe d’informations comme un libellé, une actualité, une description de produit,
+             un fichier ou une image par exemple est une ressource (« everything is content »)
             - Les ressources sont adressables et accessibles en REST via le protocole http. Chaque ressource possède une URI spécifique.
             - REST est un protocole normé, on utilise simplement les méthodes fournies comme GET, POST, PUT ou DELETE pour interagir avec le contenu.
             - Orienté représentation : un objet est référencé par une unique URI mais avoir différents formats de représentation 
@@ -24,7 +25,8 @@
          (nom et valeur associée). Un Node structure le contenu.
 
     # Apache Jackrabbit Oak : 
-        comme implémentation de JCR. Les versions précédentes,jusqu’à la version 5.6, utilisaient Adobe CRX. Oak et CRX                     apportent notamment une API pour interagir plus facilement avec JCR.
+        comme implémentation de JCR. Les versions précédentes,jusqu’à la version 5.6, utilisaient Adobe CRX.
+         Oak et CRX apportent notamment une API pour interagir plus facilement avec JCR.
  
     # OSGI : 
         est une plateforme Java permettant d’installer, démarrer, modifier des composants de code, nommés « bundles », à chaud, c’est-à-dire sans redémarrer le serveur.
