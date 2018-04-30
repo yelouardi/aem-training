@@ -9,6 +9,14 @@ My First Project
 
 Ce projet de package de contenu généré à l'aide du multimodule-content-package-archetype.
 
+Content
+------
+C'est la partie front du projet AEM (config, template, pages, composants ...)
+
+Bundle
+------
+C'est la partie back du projet AEM (ClassUse, SlingModel, Services, Servlets ...)
+
 Building
 --------
 
