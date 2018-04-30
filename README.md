@@ -13,12 +13,15 @@
             - Orienté représentation : un objet est référencé par une unique URI mais avoir différents formats de représentation 
             disponible. Par exemple, une requête AJAX réclame du JSON, une application Java demande du XML, un navigateur Web veut du HTML.
              Pour répondre à ceci, on pourra créer différents services de représentation et rendu pour chaque type de ressource.
-             
+
             - Communication sans état (stateless). REST est lui-même stateless, il n’utilise pas de cookies et ses clients doivent se ré-authentifier à chaque requête.
 
     # JCR : 
-        Gestion des contenus : Java Content Repository 'API d'entrepôt documentaire standard appelée aussi JSR 283 (anciennement appelée JSR 170).
-        Java Content Repository est un espace de stockage de données semi-structuré sous la forme d’une arborescence de nœuds. Chaque élément (Item) est soit un nœud (Node), soit une propriété (Property). Une Property stocke l’information (nom et valeur associée). Un Node structure le contenu.
+        Gestion des contenus : Java Content Repository 'API d'entrepôt documentaire standard appelée aussi JSR 283 
+        (anciennement appelée JSR 170).
+        Java Content Repository est un espace de stockage de données semi-structuré sous la forme d’une arborescence de nœuds. 
+        Chaque élément (Item) est soit un nœud (Node), soit une propriété (Property). Une Property stocke l’information
+         (nom et valeur associée). Un Node structure le contenu.
 
     # Apache Jackrabbit Oak : 
         comme implémentation de JCR. Les versions précédentes,jusqu’à la version 5.6, utilisaient Adobe CRX. Oak et CRX                     apportent notamment une API pour interagir plus facilement avec JCR.
@@ -33,7 +36,9 @@
             - Le moteur OSGI permet de voir en direct quels sont les composants actifs et visualiser les dépendances entre eux.
 
     # Apache Felix  : 
-        qui est une implémentation de la plateforme OSGI fournissant une console d’administration et une API permettant notamment de créer facilement des bundles OSGI et d’interagir avec le code déployés (notions de servlets, de services, etc.).
+        qui est une implémentation de la plateforme OSGI fournissant une console d’administration 
+        et une API permettant notamment de créer facilement des bundles OSGI et d’interagir avec 
+        le code déployés (notions de servlets, de services, etc.).
 
 
 Good Learning 
