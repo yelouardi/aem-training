@@ -1,6 +1,8 @@
 #AEM Training 
 
-Des TPs avec leurs codes sources, pour la prise en main d'AEM
+Des TPs avec leurs codes sources, pour la prise en main d'AEM.
+------------------
+
 Je vous propose, une série des pratiques, qui vous permet de monter en compétence, sur la plateforme AEM rapidement 
 
 Chaque TP, est presenté par une branche git 
