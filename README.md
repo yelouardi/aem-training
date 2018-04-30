@@ -35,6 +35,16 @@ Pour utiliser vlt avec ce projet, commencez par créer et installer le package s
 
 Une fois la copie de travail créée, vous pouvez utiliser les commandes normales `` vlt up`` et `` vlt ci``.
 
+
+Pour commencer à utiliser VLT, vous devez effectuer les opérations suivantes:
+---------------------------------------------------
+Installez VLT, mettez à jour les variables d'environnement et mettez à jour les fichiers subversion ignorés globaux.
+Configurez le référentiel AEM (si vous ne l'avez pas déjà fait).
+Découvrez le référentiel AEM.
+Synchroniser avec le référentiel.
+Testez si la synchronisation a fonctionné.
+
+
 https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/ht-vlttool.html
 
 Specifying CRX Host/Port
