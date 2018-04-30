@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
-    <filter root="/apps/first"/>
+    <filter root="/apps/first/components"/>
+    <filter root="/apps/first/install"/>
+    <filter root="/apps/first/templates"/>
 </workspaceFilter>
