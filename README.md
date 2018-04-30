@@ -35,6 +35,8 @@ Pour utiliser vlt avec ce projet, commencez par créer et installer le package s
 
 Une fois la copie de travail créée, vous pouvez utiliser les commandes normales `` vlt up`` et `` vlt ci``.
 
+https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/ht-vlttool.html
+
 Specifying CRX Host/Port
 ------------------------
 
