@@ -6,6 +6,10 @@ Lorsque vous créez une page, vous devez sélectionner un modèle. ceci sera uti
 
 Lorsque vous créez un fragment de contenu, vous devez également sélectionner un modèle. Ce modèle définit la structure, les éléments initiaux et les variations.
 
+_NB_
+
+`ranking = order dans la liste des template `
+
 Les modèles suivants sont couverts en détail:
 =============================================
 Modèles de page - Statiques (Template staticpage)
