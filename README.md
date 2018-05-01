@@ -16,12 +16,15 @@ Modèles de page -  Heritage des templates(Template inheritedpage)
 -----------------------------
 Modèles de fragment de contenu
 -----------------------------
-AEM 6.3
+_**AEM 6.2 - 6.3_** 
 Le content Fragment est une Asset  
 https://helpx.adobe.com/experience-manager/6-2/sites/authoring/using/content-fragments.html
 https://helpx.adobe.com/ca_fr/experience-manager/6-3/release-notes/content-fragment-models-fp.html
 
 Rendu de modèle adaptatif
 -----------------------------
+_**AEM 6.2 - 6.3_**  
+https://helpx.adobe.com/fr/experience-manager/6-3/forms/using/custom-adaptive-forms-templates.html
+
 
 Good Learning 
