@@ -10,10 +10,17 @@ Les modèles suivants sont couverts en détail:
 =============================================
 Modèles de page - Statiques (Template staticpage)
 -----------------------------
-Modèles de page - modifiables (Template editablepage)
+Modèles de page - Modifiables (Template editablepage)
+-----------------------------
+Modèles de page -  Heritage des templates(Template inheritedpage)
 -----------------------------
 Modèles de fragment de contenu
 -----------------------------
+AEM 6.3
+Le content Fragment est une Asset  
+https://helpx.adobe.com/experience-manager/6-2/sites/authoring/using/content-fragments.html
+https://helpx.adobe.com/ca_fr/experience-manager/6-3/release-notes/content-fragment-models-fp.html
+
 Rendu de modèle adaptatif
 -----------------------------
 

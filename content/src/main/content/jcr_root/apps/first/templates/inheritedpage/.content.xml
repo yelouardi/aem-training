@@ -2,13 +2,13 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
           xmlns:jcr="http://www.jcp.org/jcr/1.0"
           jcr:primaryType="cq:Template"
-          jcr:title="Training Editable Template Page"
-          jcr:description="Training Editable Template Page"
+          jcr:title="Training Inherited Template Page"
+          jcr:description="Training Inherited Template Page"
           allowedPaths="[/content(/.*)?]"
-          ranking="{Long}1001">
+          ranking="{Long}1002">
     <jcr:content
             jcr:primaryType="cq:PageContent"
-            sling:resourceType="first/components/pages/editablepage"
+            sling:resourceType="first/components/pages/inheritedpage"
             cq:designPath="/etc/designs/white-label"
             cq:deviceGroups="[/etc/mobile/groups/responsive]">
         <cq:responsive jcr:primaryType="nt:unstructured">
