@@ -45,6 +45,7 @@ OSGI
             - Les déploiements de bundles sont aisés (fichiers Zip normés à installer via une console d’administration
             - Les bugs sont détectés plus tôt
             - Le moteur OSGI permet de voir en direct quels sont les composants actifs et visualiser les dépendances entre eux.
+https://t-templier.developpez.com/tutoriel/java/osgi/osgi1/
 
 Apache Felix
 --------------
