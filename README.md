@@ -22,6 +22,7 @@ Apache  Sling
 
             - Communication sans état (stateless). REST est lui-même stateless,
              il n’utilise pas de cookies et ses clients doivent se ré-authentifier à chaque requête.
+https://sling.apache.org/documentation/tutorials-how-tos.html
 
 JCR 
 -----
