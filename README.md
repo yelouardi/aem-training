@@ -35,6 +35,8 @@ JCR
         Chaque élément (Item) est soit un nœud (Node), soit une propriété (Property). Une Property stocke l’information
          (nom et valeur associée). Un Node structure le contenu.
 
+https://www.slideshare.net/bdelacretaz/rapid-jcr-applications-development-with-sling-1196003
+
 Apache Jackrabbit Oak 
 -----------------------
         comme implémentation de JCR. Les versions précédentes,jusqu’à la version 5.6, utilisaient Adobe CRX.
