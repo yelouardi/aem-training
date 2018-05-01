@@ -20,5 +20,6 @@ TP2 = Création d'un projet AEM from scratch
 ------------------------------
 TP3 = Templating AEM
 --------------------
-
+TP4 = Composants AEM
+--------------------
 Good Learning 
