@@ -53,6 +53,8 @@ Apache Felix
         le code déployés (notions de servlets, de services, etc.).
 
 
+https://www.slideshare.net/mikeyhendy/adobe-meetup-aem-architecture-sydney-2015
+
 
 
 Environments
