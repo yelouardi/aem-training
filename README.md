@@ -41,7 +41,8 @@ Apache Jackrabbit Oak
 -----------------------
         comme implémentation de JCR. Les versions précédentes,jusqu’à la version 5.6, utilisaient Adobe CRX.
          Oak et CRX apportent notamment une API pour interagir plus facilement avec JCR.
- 
+ https://www.slideshare.net/craigsdickson/rapid-restful-web-applications-with-apache-sling-and-jackrabbit?next_slideshow=2
+ 
 OSGI
 ----
         est une plateforme Java permettant d’installer, démarrer, modifier des composants de code, nommés « bundles », à chaud, c’est-à-dire sans redémarrer le serveur.
