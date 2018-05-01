@@ -1,8 +1,9 @@
 #AEM Training TP2
 
-# Création du nouveau projet 
+# Création du nouveau projet 6.0,6.1
 
  mvn archetype:generate -DarchetypeRepository=https://repo.adobe.com/nexus/content/groups/public/ -DarchetypeGroupId=com.day.jcr.vault -DarchetypeArtifactId=multimodule-content-package-archetype -DarchetypeVersion=1.0.2 -DgroupId=com.aem.training -DartifactId=first -Dversion=1.0-SNAPSHOT -Dpackage=com.aem.training -DappsFolderName=first -DartifactName="My First Project" -DcqVersion="5.6.1" -DpackageGroup="AEM TRAINING"
+
 
 My First Project
 ========
@@ -55,6 +56,49 @@ mvn -Dcrx.host=otherhost -Dcrx.port=5502 <goals>
 
 
 https://helpx.adobe.com/experience-manager/using/first-arch10.html
+
+
+
+#Optional
+
+Création du nouveau projet 6.3,6.4
+-----------------
+
+**Setup Lazybones**
+
+Lazybones est installé en utilisant un processus en deux étapes. Tout d'abord, installez sdkman, un système de gestion de Sofware Development Kit. Les instructions pour installer sdkman peuvent être trouvées à http://sdkman.io/install.html.
+Dans une fenêtre Terminal, exécutez ces deux commandes:
+
+`curl -s "https://get.sdkman.io" | bash`
+
+`source ~/.sdkman/bin/sdkman-init.sh`
+
+Once sdkman is installed, you can use it to install lazybones with the following command:
+
+`sdk install lazybones`
+
+**_Create a Lazybones project_**
+
+Vous pouvez utiliser Lazybones pour créer un projet Experience Manager. Lazybones est un outil de création de projet qui utilise des modèles pour créer des projets. Une fois créé, vous pouvez importer le projet dans Eclipse.
+
+Pour créer un projet Experience Manager à l'aide de Lazybones, procédez comme suit:
+
+1. Ouvrez un autre Terminal (sous Windows, vous pouvez utiliser un outil comme Git Bash).
+
+2. Accédez au dossier racine de l'utilisateur.
+
+3. Entrez la commande suivante:
+
+     lazybones créer aem-multimodule-projet mon-projet
+
+Remarque: - Pour AEM 6.4, choisissez la version AEM cible [6.3]: Les choix sont [6.3, 6.4]: 6.4
+
+4. Répondez aux questions avec les valeurs par défaut (entrez return pour toutes les questions).
+
+5. Une fois le projet construit avec succès, vous verrez le message suivant.
+
+
+https://helpx.adobe.com/experience-manager/using/aem_lazybones.html
 
 
 Good Learning 
