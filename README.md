@@ -41,7 +41,7 @@ Apache Jackrabbit Oak
 -----------------------
         comme implémentation de JCR. Les versions précédentes,jusqu’à la version 5.6, utilisaient Adobe CRX.
          Oak et CRX apportent notamment une API pour interagir plus facilement avec JCR.
- https://www.slideshare.net/craigsdickson/rapid-restful-web-applications-with-apache-sling-and-jackrabbit?next_slideshow=2
+ https://www.slideshare.net/ehsavoie/java-content-repository-avec-jackrabbit?qid=fd039c36-2f39-4b6d-85fd-ba71baebd8a5&v=&b=&from_search=3
  
 OSGI
 ----
