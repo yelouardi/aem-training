@@ -9,7 +9,7 @@
     <jcr:content
             jcr:primaryType="cq:PageContent"
             sling:resourceType="first/components/pages/staticpage"
-            cq:designPath="/etc/designs/white-label"
+            cq:designPath="/etc/designs/first"
             cq:deviceGroups="[/etc/mobile/groups/responsive]">
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">

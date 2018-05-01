@@ -14,6 +14,27 @@ Modèles de page - Modifiables (Template editablepage)
 -----------------------------
 Modèles de page -  Heritage des templates(Template inheritedpage)
 -----------------------------
+Modèles de page -  Policy des templates(Template policypage)
+-----------------------------
+**allowedChildren** 
+
+Chemin d'un modèle autorisé à être un enfant de ce modèle.
+
+**allowedParents** 
+
+Chemin d'un modèle autorisé à être un parent de ce modèle.
+
+**allowedPaths** 
+
+Chemin d'accès à une page pouvant être basée sur ce modèle.
+
+_Exemple_
+----------
+
+`          allowedPaths="[/content(/.*)?]"
+          allowedParents="[/apps/first/templates/editablepage]"
+          allowedChildren="[/apps/first/templates/inheritedpage]"`
+          
 Modèles de fragment de contenu
 -----------------------------
 _**AEM 6.2 - 6.3_** 
