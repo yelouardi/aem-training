@@ -19,7 +19,8 @@
                 <items jcr:primaryType="nt:unstructured">
                     <fieldset
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                        sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                        jcr:title="Title H2">
                         <layout
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
@@ -30,7 +31,7 @@
                                 <items jcr:primaryType="nt:unstructured">
 
                                     <!--
-                                    Heritage du composant title
+                                    Inclusion du composant title
                                     -->
                                     <title
                                             jcr:primaryType="nt:unstructured"
@@ -39,7 +40,7 @@
 
                                     <myTitle jcr:primaryType="nt:unstructured"
                                                  sling:resourceType="granite/ui/components/foundation/form/textfield"
-                                                 fieldLabel="Titre"
+                                                 fieldLabel="My Titre "
                                                  name="./myTitle"/>
 
                                 </items>

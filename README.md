@@ -162,6 +162,12 @@ Sling:resourceType
 **granite/ui/components/foundation/layouts/fixedcolumns :**  Définit les colonnes fixes.
 
 
+Exemple des dialogs AEM
+---
+https://gist.github.com/kevinweber/05c4c8cf005a6e640f7c8ad65ef5113c
+
+
+
 https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/components-basics.html
 
 Good Learning 
