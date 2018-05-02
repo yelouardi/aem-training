@@ -36,6 +36,8 @@ Pour utiliser vlt avec ce projet, commencez par créer et installer le package s
 
 Une fois la copie de travail créée, vous pouvez utiliser les commandes normales `` vlt up`` et `` vlt ci``.
 
+https://plugins.jetbrains.com/plugin/7328-intellivault
+http://www.aemcq5tutorials.com/tutorials/configure-filevault-vlt-tool-in-cq/
 
 Pour commencer à utiliser VLT, vous devez effectuer les opérations suivantes:
 ---------------------------------------------------
