@@ -45,10 +45,10 @@ Chemin d'un modèle autorisé à être un parent de ce modèle.
 
 Chemin d'accès à une page pouvant être basée sur ce modèle.
 
-_Exemple_
+_Exemple_  /content/jcr_root/apps/first/templates/policypage/.content.xml
 ----------
-
-`          allowedPaths="[/content(/.*)?]"
+    <jcr:root
+`         allowedPaths="[/content(/.*)?]"
           allowedParents="[/apps/first/templates/editablepage]"
           allowedChildren="[/apps/first/templates/inheritedpage]"`
           
