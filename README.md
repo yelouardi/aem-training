@@ -175,32 +175,32 @@ https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/components
 Exercices 
 ====
 
-Exe1 :
+Ex-1 :
 ----
 Developpe un composant editable de 3 champs ( 2 text et 1 radiobutton ( Mr,MM))
 le composant retourn un rendu avec
 
-NOM : 
-PRENOM : 
-SEXE : 
+- NOM : 
+- PRENOM : 
+- SEXE : 
 
-Exe2 :
+Ex-2 :
 ----
 Developpe un composant editable de 5 champs
 - 1 text ( N° commande) 
-- 1 radiobutton (la viande)
+- 1 checkbox (la viande)
 - 1 list (légumes)
-- 1 radiobutton (frites)
+- 1 checkbox (frites)
 - 1 list (boisson)
 - 1 description (RTE)
 
 le composant retourn un rendu commande :
-La commande N° : 
-Viande ou Sans Viande
-Légume :  
-Avec Frites ou sans Frites
-Boisson : 
-Description
+- La commande N° : 
+- Viande ou Sans Viande
+- Légume :  
+- Avec Frites ou sans Frites
+- Boisson : 
+- Description
 
 
 Good Learning 
