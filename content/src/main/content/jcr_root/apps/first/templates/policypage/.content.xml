@@ -4,7 +4,7 @@
           jcr:primaryType="cq:Template"
           jcr:title="Training Policy Template Page"
           jcr:description="Training Policy Template Page"
-          allowedPaths="[/content(/.*)?]"
+          allowedPaths="[/content/training-site/dynamic(/.*)?]"
           allowedParents="[/apps/first/templates/editablepage]"
           allowedChildren="[/apps/first/templates/inheritedpage]"
           ranking="{Long}1003">
