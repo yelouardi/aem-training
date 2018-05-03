@@ -153,7 +153,7 @@ cq:actions
 **copymove** Ajoute un bouton pour copier et couper le composant.
 
 
-Sling:resourceType	
+Sling:resourceType	(dans le dialogue) 
 =======
 
 **granite/ui/components/foundation/container  :** Définit un conteneur pour le dialogue
