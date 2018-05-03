@@ -28,6 +28,11 @@ Modèles de page -  Heritage des templates(Template inheritedpage)
 
 Modèles de page -  Policy des templates(Template policypage)
 -----------------------------
+**cq:allowedTemplates** 
+
+Type de template autorisé à être un enfant de ce modèle.
+
+
 **allowedChildren** 
 
 Chemin d'un modèle autorisé à être un enfant de ce modèle.
