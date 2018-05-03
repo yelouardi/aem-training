@@ -18,6 +18,10 @@ Modèles de page - Statiques (Template staticpage)
 
 Modèles de page - Modifiables (Template editablepage)
 -----------------------------
+Pour editer correctement notre page 
+il faut autoriser l'ajout des composants dans les parsys 
+`changer le mode vers Design, clique sur le parsys puis editer, selectionner le groupe ou le composant à autoriser`
+
 Modèles de page -  Heritage des templates(Template inheritedpage)
 -----------------------------
 Modèles de page -  Policy des templates(Template policypage)
