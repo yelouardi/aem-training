@@ -24,6 +24,8 @@ il faut autoriser l'ajout des composants dans les parsys
 
 Modèles de page -  Heritage des templates(Template inheritedpage)
 -----------------------------
+`sling:resourceSuperType="first/components/pages/editablepage"`
+
 Modèles de page -  Policy des templates(Template policypage)
 -----------------------------
 **allowedChildren** 
