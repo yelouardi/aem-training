@@ -153,7 +153,7 @@ cq:actions
 **copymove** Ajoute un bouton pour copier et couper le composant.
 
 
-Sling:resourceType	(dans le dialogue) 
+Sling:resourceType	
 =======
 
 **granite/ui/components/foundation/container  :** Définit un conteneur pour le dialogue
@@ -169,5 +169,38 @@ https://gist.github.com/kevinweber/05c4c8cf005a6e640f7c8ad65ef5113c
 
 
 https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/components-basics.html
+
+
+
+Exercices 
+====
+
+Exe1 :
+----
+Developpe un composant editable de 3 champs ( 2 text et 1 radiobutton ( Mr,MM))
+le composant retourn un rendu avec
+
+NOM : 
+PRENOM : 
+SEXE : 
+
+Exe2 :
+----
+Developpe un composant editable de 5 champs
+- 1 text ( N° commande) 
+- 1 radiobutton (la viande)
+- 1 list (légumes)
+- 1 radiobutton (frites)
+- 1 list (boisson)
+- 1 description (RTE)
+
+le composant retourn un rendu commande :
+La commande N° : 
+Viande ou Sans Viande
+Légume :  
+Avec Frites ou sans Frites
+Boisson : 
+Description
+
 
 Good Learning 
