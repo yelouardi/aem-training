@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
-    <filter root="/apps/first/components"/>
+    <filter root="/apps/first/components/pages/staticpage"/>
+    <filter root="/apps/first/components/pages/editablepage"/>
+    <filter root="/apps/first/components/pages/inheritedpage"/>
+    <filter root="/apps/first/components/pages/policypage"/>
     <filter root="/apps/first/install"/>
-    <filter root="/apps/first/templates"/>
+    <filter root="/apps/first/templates/staticpage"/>
+    <filter root="/apps/first/templates/editablepage"/>
+    <filter root="/apps/first/templates/inheritedpage"/>
+    <filter root="/apps/first/templates/policypage"/>
+    <filter root="/etc/designs/first"/>
 </workspaceFilter>
