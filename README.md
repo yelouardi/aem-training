@@ -14,6 +14,8 @@ Les modèles suivants sont couverts en détail:
 =============================================
 Modèles de page - Statiques (Template staticpage)
 -----------------------------
+//TODO completer la première partie du TP 
+
 Modèles de page - Modifiables (Template editablepage)
 -----------------------------
 Modèles de page -  Heritage des templates(Template inheritedpage)
