@@ -18,10 +18,21 @@ Modèles de page - Statiques (Template staticpage)
 
 Modèles de page - Modifiables (Template editablepage)
 -----------------------------
+Pour editer correctement notre page 
+il faut autoriser l'ajout des composants dans les parsys 
+`changer le mode vers Design, clique sur le parsys puis editer, selectionner le groupe ou le composant à autoriser`
+
 Modèles de page -  Heritage des templates(Template inheritedpage)
 -----------------------------
+`sling:resourceSuperType="first/components/pages/editablepage"`
+
 Modèles de page -  Policy des templates(Template policypage)
 -----------------------------
+**cq:allowedTemplates** 
+
+Type de template autorisé à être un enfant de ce modèle.
+
+
 **allowedChildren** 
 
 Chemin d'un modèle autorisé à être un enfant de ce modèle.
@@ -34,10 +45,10 @@ Chemin d'un modèle autorisé à être un parent de ce modèle.
 
 Chemin d'accès à une page pouvant être basée sur ce modèle.
 
-_Exemple_
+_Exemple_  /content/jcr_root/apps/first/templates/policypage/.content.xml
 ----------
-
-`          allowedPaths="[/content(/.*)?]"
+    <jcr:root
+`         allowedPaths="[/content(/.*)?]"
           allowedParents="[/apps/first/templates/editablepage]"
           allowedChildren="[/apps/first/templates/inheritedpage]"`
           
