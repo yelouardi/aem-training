@@ -1,0 +1,12 @@
+<sly>
+    <div >
+        <div class="wrapper">
+            <span data-sly-test="${wcmmode.edit && !properties.identite}">BLOC TITRE VIDE</span>
+            <h1>${properties.jcr:title}</h1>
+
+            <h2>Sex :   ${properties.identite}</h2>
+            <h2>Nom :   ${properties.nom}</h2>
+            <h2>Prenom : ${properties.preNom }</h2>
+        </div>
+    </div>
+</sly>
