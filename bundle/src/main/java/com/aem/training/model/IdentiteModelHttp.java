@@ -29,7 +29,7 @@ public class IdentiteModelHttp {
     
     Map<String, String[]> mapParam = request.getParameterMap();
     	LOGGER.debug("{} , ------------------ IDENTITE -------------------------",				mapParam.get("toto"));
-		return String.format("BienVennue : %s  dans la formation AEM, avec le parametre -----: :---", mapParam.get("toto"));
+		return String.format("BienVennue : %s  dans la formation AEM", mapParam.get("toto"));
 	}
     	
     
