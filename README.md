@@ -87,6 +87,6 @@ Excerice 1:
 Repartir du TP1, pour ajouter un libellé qui affiche (dynamiquement) en plus les informations suivantes : 
 
 Bienvenu Madamme/monsieur : XXXXX, XXXX à notre formation ADOBE AEM FRANCE !   
--
+
 
 Good Learning 
