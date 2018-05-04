@@ -51,6 +51,5 @@ Dependence Maven à ajouter
        org.apache.sling.models.it.models
      </Sling-Model-Packages>
 
-    
-    
+  
 Good Learning 
