@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+	xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+	xmlns:nt="http://www.jcp.org/jcr/nt/1.0" jcr:primaryType="nt:unstructured"
+	jcr:title="identite" sling:resourceType="cq/gui/components/authoring/dialog"
+	width="60rem" helpPath="en/cq/current/wcm/default_components.html#Carousel"
+	mode="edit">
+	<content jcr:primaryType="nt:unstructured"
+		sling:resourceType="granite/ui/components/foundation/container">
+		<layout jcr:primaryType="nt:unstructured"
+			sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+		<items jcr:primaryType="nt:unstructured">
+			<column jcr:primaryType="nt:unstructured"
+				sling:resourceType="granite/ui/components/foundation/container">
+				<items jcr:primaryType="nt:unstructured">
+					<fieldset jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/foundation/form/fieldset"
+						jcr:title="identite">
+						<layout jcr:primaryType="nt:unstructured"
+							sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns" />
+						<items jcr:primaryType="nt:unstructured">
+							<column jcr:primaryType="nt:unstructured"
+								sling:resourceType="granite/ui/components/foundation/container">
+								<items jcr:primaryType="nt:unstructured">
+
+
+
+
+									<radioGroup jcr:primaryType="nt:unstructured" name="./identite"
+										text="sex" required="{Boolean}true"
+										sling:resourceType="granite/ui/components/foundation/form/radiogroup"
+										renderReadOnly="{Boolean}true">
+
+										<items jcr:primaryType="nt:unstructured">
+											<radioH jcr:primaryType="nt:unstructured"
+												name="./identite" text="Homme" value="Homme" cq-msm-lockable="identite"
+												sling:resourceType="granite/ui/components/foundation/form/radio"
+												renderReadOnly="{Boolean}true" />
+											<radioF jcr:primaryType="nt:unstructured" name="./identite"
+												text="femme" value="Femme" cq-msm-lockable="identite"
+												sling:resourceType="granite/ui/components/foundation/form/radio"
+												renderReadOnly="{Boolean}true" />
+											<radioDefaultValue jcr:primaryType="nt:unstructured"
+												name="./identite@DefaultValue" value="pas de sex"
+												sling:resourceType="granite/ui/components/foundation/form/hidden" />
+											<radioDefaultWhenMissing
+												jcr:primaryType="nt:unstructured" name="./identite@UseDefaultWhenMissing"
+												value="true" sling:resourceType="granite/ui/components/foundation/form/hidden" />
+										</items>
+									</radioGroup>
+
+
+
+
+
+
+									<nom jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/foundation/form/textfield"
+										fieldLabel="Nom " name="./nom" />
+									<preNom jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/foundation/form/textfield"
+										fieldLabel="Prénom " name="./preNom" />
+
+								</items>
+							</column>
+						</items>
+					</fieldset>
+				</items>
+			</column>
+		</items>
+	</content>
+</jcr:root>
