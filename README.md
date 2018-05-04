@@ -1,55 +1,67 @@
-#AEM Training TP6
+#AEM Training TP7
 
-# AEM Sling Model
+# AEM Service OSGI
+Service OSGI c'est une class JAVA qui est charger ou instanciée par le context OSGI (singleton) referencé et exposer 
+à tout les autres Service par son interface 
 
-- De nombreux projets Sling veulent être en mesure de créer des objets modèles 
-- des POJO qui sont automatiquement mappés à partir d'objets Sling,
-    généralement des ressources, mais aussi des objets de requête.
-    Parfois, ces POJO ont également besoin de services OSGi.
+- Dans ce TP on va créer un Service OSGI qui fait appel à une API REST
+- Le Service return le reponse au model pour le transférer ou client
 
-
-#Objectifs de conception 
-
-- OOTB, propriétés de ressource  (via ValueMap), SlingBindings, services OSGi, attributs de demande
-
-- Adapter plusieurs objets - ressources minimales requises et SlingHttpServletRequest
-
-https://sling.apache.org/documentation/bundles/models.html
+    https://restcountries.eu/rest/v2/all
 
 
-Exemple d'une class SLingModel
---
-    package org.apache.sling.models.it.models;
-    @Model(adaptables=Resource.class)
-    public class MyModel {
+
+
+Exemple d'une class Service
+=
+Interface
+ -
+    package com.aem.training;
     
-        @Inject
-        private String propertyName;
+    /**
+     * A simple service interface
+     */
+    public interface HelloService {
+        
+        /**
+         * @return the name of the underlying JCR repository implementation
+         */
+        public String getRepositoryName();
+    
+    }
+   
+ Implémentation
+ --
+    package com.aem.training.impl;
+    
+    import javax.jcr.Repository;
+    
+    import org.apache.felix.scr.annotations.Component;
+    import org.apache.felix.scr.annotations.Reference;
+    import org.apache.felix.scr.annotations.Service;
+    import org.apache.sling.jcr.api.SlingRepository;
+    
+    import com.aem.training.HelloService;
+    
+    /**
+     * One implementation of the {@link HelloService}. Note that
+     * the repository is injected, not retrieved.
+     */
+    @Service
+    @Component(metatype = false)
+    public class HelloServiceImpl implements HelloService {
+        
+        @Reference
+        private SlingRepository repository;
+    
+        public String getRepositoryName() {
+            return repository.getDescriptor(Repository.REP_NAME_DESC);
+        }
+    
     }
 
-Dependence Maven à ajouter 
--
-    <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <extensions>true</extensions>
-        <configuration>
-            <instructions>
-                <_plugin>org.apache.sling.bnd.models.ModelsScannerPlugin</_plugin>
-            </instructions>
-        </configuration>
-        <dependencies>
-            <dependency>
-                <groupId>org.apache.sling</groupId>
-                <artifactId>org.apache.sling.bnd.models</artifactId>
-                <version>1.0.0</version>
-            </dependency>
-        </dependencies>
-    </plugin>
-    
-     <Sling-Model-Packages>
-       org.apache.sling.models.it.models
-     </Sling-Model-Packages>
+
+
 
     
     

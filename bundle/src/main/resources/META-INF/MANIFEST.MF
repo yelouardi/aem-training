@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1525423948052
+Bnd-LastModified: 1525428636611
 Build-Jdk: 1.8.0_112
 Built-By: yassineelouardi
 Bundle-Description: Maven Multimodule project for My First Project.
