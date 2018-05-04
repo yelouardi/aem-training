@@ -16,36 +16,30 @@ https://docs.adobe.com/content/docs/en/aem/6-1/ref/javadoc/com/adobe/cq/sightly/
 
 Exemple d'une class WCMUsePojo
 --
-    public class HeroTextComponent extends WCMUsePojo {
+    public class IdentiteTextComponent extends WCMUsePojo {
      /** The hero text bean. */
-     
+        private String identite;
+     	private String nom;
+     	private String preNom;
       
     @Override
     public void activate() throws Exception {
           
-          private String description ; 
-          private String headingText ; 
-
-        Node currentNode = getResource().adaptTo(Node.class);
-         
+          ValueMap values = getResource().adaptTo(ValueMap.class);
           
-        if(currentNode.hasProperty("jcr:Heading")){
-            setHeadingText(currentNode.getProperty("./jcr:Heading").getString());
+          		if (values.containsKey("identite")) {
+          			setIdentite(getProperties().get("identite", String.class));
+          		}
+          		if (getProperties().containsKey("nom")) {
+          			setNom(getProperties().get("nom", String.class));
+          		}
+          		if (getProperties().containsKey("preNom")) {
+          			setPreNom(getProperties().get("preNom", String.class));
+          		}
+          		this.messageDisply = String.format("BienVennue : %s %s %s dans la formation AEM", this.identite, this.nom,
+          				this.preNom);
         }
-        if(currentNode.hasProperty("jcr:description")){
-            setDescription(currentNode.getProperty("./jcr:description").getString());
-        }
-          
-    }
       
-      
-      
-        public String getsetDescription() {
-        return this.description;
-        }
-         public String getsetHeadingText() {
-          return this.headingText;
-        }
         
     }
 
@@ -62,23 +56,13 @@ Dependence Maven à ajouter
                <classifier>obfuscated-apis</classifier>
                <scope>provided</scope>
            </dependency>
-            
-           <dependency>
-               <groupId>org.apache.geronimo.specs</groupId>
-               <artifactId>geronimo-atinject_1.0_spec</artifactId>
-               <version>1.0</version>
-               <scope>provided</scope>
-           </dependency>
-
 
 HTL
 ==
 
-    <div data-sly-use.heroTextObject="com.foo.service.core.HeroTextComponent" data-sly-test="${heroTextObject}">
-       <h1>${heroTextObject.headingText}</h1>
-       <p>${heroTextObject.description}</p>    
-    </div>
-    
+        <div data-sly-use.identiteUse="${'com.aem.training.components.use.IdentiteTextComponent'}">
+			<h1>${identiteUse.messageDisply}</h1>
+		</div>
    
    https://helpx.adobe.com/experience-manager/using/aem63_datasource.html
    
