@@ -41,6 +41,10 @@
 			<artifactId>servlet-api</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>javax.jcr</groupId>
 			<artifactId>jcr</artifactId>
 		</dependency>
@@ -57,8 +61,14 @@
 			<artifactId>uber-jar</artifactId>
 			<classifier>obfuscated-apis</classifier>
 		</dependency>
-
-
+		<dependency>
+			<groupId>org.apache.sling</groupId>
+			<artifactId>org.apache.sling.models.api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -73,7 +83,14 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
+					<Export-Package>
+							com.aem.training.model,
+							com.aem.training.components.use
+					</Export-Package>
 						<Bundle-SymbolicName>com.aem.trainig.first-bundle</Bundle-SymbolicName>
+						<Sling-Model-Packages>
+							com.aem.training.model
+						</Sling-Model-Packages>
 					</instructions>
 				</configuration>
 			</plugin>
