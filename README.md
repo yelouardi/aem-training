@@ -1,84 +1,56 @@
-#AEM Training TP5
+#AEM Training TP6
 
-# AEM WCMUse
+# AEM Sling Model
 
-C'est le Controleur d'un composant 
+- De nombreux projets Sling veulent être en mesure de créer des objets modèles 
+- des POJO qui sont automatiquement mappés à partir d'objets Sling,
+    généralement des ressources, mais aussi des objets de requête.
+    Parfois, ces POJO ont également besoin de services OSGi.
 
-Il s'execute côté serveur 
 
-Contrôleur : 
+#Objectifs de conception 
+
+- OOTB, propriétés de ressource  (via ValueMap), SlingBindings, services OSGi, attributs de demande
+
+- Adapter plusieurs objets - ressources minimales requises et SlingHttpServletRequest
+
+https://sling.apache.org/documentation/bundles/models.html
+
+
+Exemple d'une class SLingModel
 --
-Module qui traite les actions de l'utilisateur, modifie les données du modèle et de la vue
-
-
-
-https://docs.adobe.com/content/docs/en/aem/6-1/ref/javadoc/com/adobe/cq/sightly/WCMUsePojo.html
-
-Exemple d'une class WCMUsePojo
---
-    public class HeroTextComponent extends WCMUsePojo {
-     /** The hero text bean. */
-     
-      
-    @Override
-    public void activate() throws Exception {
-          
-          private String description ; 
-          private String headingText ; 
-
-        Node currentNode = getResource().adaptTo(Node.class);
-         
-          
-        if(currentNode.hasProperty("jcr:Heading")){
-            setHeadingText(currentNode.getProperty("./jcr:Heading").getString());
-        }
-        if(currentNode.hasProperty("jcr:description")){
-            setDescription(currentNode.getProperty("./jcr:description").getString());
-        }
-          
-    }
-      
-      
-      
-        public String getsetDescription() {
-        return this.description;
-        }
-         public String getsetHeadingText() {
-          return this.headingText;
-        }
-        
+    package org.apache.sling.models.it.models;
+    @Model(adaptables=Resource.class)
+    public class MyModel {
+    
+        @Inject
+        private String propertyName;
     }
 
 Dependence Maven à ajouter 
 -
-        <dependency>
-               <groupId>com.adobe.aem</groupId>
-               <artifactId>uber-jar</artifactId>
-               <version>6.2.0</version>
-               <!-- for AEM6.1 use this version     : <version>6.1.0</version> -->
-               <!-- for AEM6.1 SP1 use this version : <version>6.1.0-SP1-B0001</version> -->
-               <!-- for AEM6.1 SP2 use this version : <version>6.1.0-SP2</version> -->
-               <!-- for AEM6.2 use this version     : <version>6.2.0</version> -->
-               <classifier>obfuscated-apis</classifier>
-               <scope>provided</scope>
-           </dependency>
-            
-           <dependency>
-               <groupId>org.apache.geronimo.specs</groupId>
-               <artifactId>geronimo-atinject_1.0_spec</artifactId>
-               <version>1.0</version>
-               <scope>provided</scope>
-           </dependency>
-
-
-HTL
-==
-
-    <div data-sly-use.heroTextObject="com.foo.service.core.HeroTextComponent" data-sly-test="${heroTextObject}">
-       <h1>${heroTextObject.headingText}</h1>
-       <p>${heroTextObject.description}</p>    
-    </div>
+    <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+            <instructions>
+                <_plugin>org.apache.sling.bnd.models.ModelsScannerPlugin</_plugin>
+            </instructions>
+        </configuration>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>org.apache.sling.bnd.models</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+        </dependencies>
+    </plugin>
     
+     <Sling-Model-Packages>
+       org.apache.sling.models.it.models
+     </Sling-Model-Packages>
+
     
     
 Good Learning 
