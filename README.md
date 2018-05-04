@@ -79,6 +79,8 @@ HTL
        <p>${heroTextObject.description}</p>    
     </div>
     
-    
+   
+   https://helpx.adobe.com/experience-manager/using/aem63_datasource.html
+   
     
 Good Learning 
