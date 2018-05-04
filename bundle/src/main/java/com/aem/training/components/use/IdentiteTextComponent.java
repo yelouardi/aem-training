@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 
 import com.adobe.cq.sightly.WCMUsePojo;
 
-public class IdentiteTextComponent  extends WCMUsePojo {
+public class IdentiteTextComponent extends WCMUsePojo {
 	private static final Logger LOGGER = LoggerFactory.getLogger(IdentiteTextComponent.class);
 	private String identite;
 	private String nom;
@@ -16,11 +16,9 @@ public class IdentiteTextComponent  extends WCMUsePojo {
 
 	private String messageDisply;
 
-
 	public String getMessageDisply() {
 		return messageDisply;
 	}
-
 
 	public String getIdentite() {
 		return identite;
@@ -46,32 +44,30 @@ public class IdentiteTextComponent  extends WCMUsePojo {
 		this.preNom = preNom;
 	}
 
-	
 	public void activate() throws Exception {
 
-		LOGGER.error("-----------------------------------------------");
-		
 		ValueMap values = getResource().adaptTo(ValueMap.class);
-		LOGGER.error("{} , -----------------------------------------------", values);
-		LOGGER.error("{} , -----------------------------------------------", values.size());
 
 		if (values.containsKey("identite")) {
-			LOGGER.error("{} , ------------------ IDENTITE -------------------------", values.get("identite",String.class));
+			LOGGER.debug("{} , ------------------ IDENTITE -------------------------",
+					values.get("identite", String.class));
 
-			setIdentite(getProperties().get("identite",String.class));
+			setIdentite(getProperties().get("identite", String.class));
 		}
 		if (getProperties().containsKey("nom")) {
-			LOGGER.error("{} , ------------------ NAME -------------------------", values.get("nom",String.class));
+			LOGGER.debug("{} , ------------------ NAME -------------------------", values.get("nom", String.class));
 
-			setNom(getProperties().get("nom",String.class));
+			setNom(getProperties().get("nom", String.class));
 		}
 		if (getProperties().containsKey("preNom")) {
-			LOGGER.error("{} , ------------------ PRENOM -------------------------", values.get("preNom",String.class));
+			LOGGER.debug("{} , ------------------ PRENOM -------------------------",
+					values.get("preNom", String.class));
 
-			setPreNom(getProperties().get("preNom",String.class));
+			setPreNom(getProperties().get("preNom", String.class));
 		}
-		
-		this.messageDisply = String.format("BienVennue : %s %s %s dans la formation AEM", this.identite,this.nom,this.preNom);
+
+		this.messageDisply = String.format("BienVennue : %s %s %s dans la formation AEM", this.identite, this.nom,
+				this.preNom);
 	}
 
 }
