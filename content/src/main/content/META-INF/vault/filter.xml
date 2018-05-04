@@ -5,7 +5,7 @@
     <filter root="/apps/first/components/pages/inheritedpage"/>
     <filter root="/apps/first/components/pages/policypage"/>
     <filter root="/apps/first/components/content/title-h2"/>
-        <filter root="/apps/first/components/content/identite"/>
+    <filter root="/apps/first/components/content/identite"/>
     <filter root="/apps/first/install"/>
     <filter root="/apps/first/templates/staticpage"/>
     <filter root="/apps/first/templates/editablepage"/>
