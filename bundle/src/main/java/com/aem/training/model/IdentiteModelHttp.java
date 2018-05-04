@@ -28,7 +28,7 @@ public class IdentiteModelHttp {
     public String  getMessageDisplay (){
     
     Map<String, String[]> mapParam = request.getParameterMap();
-    	LOGGER.error("{} , ------------------ IDENTITE -------------------------",				mapParam.get("toto"));
+    	LOGGER.debug("{} , ------------------ IDENTITE -------------------------",				mapParam.get("toto"));
 		return String.format("BienVennue : %s  dans la formation AEM, avec le parametre -----: :---", mapParam.get("toto"));
 	}
     	
