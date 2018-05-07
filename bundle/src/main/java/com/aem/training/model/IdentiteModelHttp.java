@@ -15,11 +15,10 @@ import org.apache.sling.models.annotations.injectorspecific.Self;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-//@Model(adaptables=Resource.class)
-@Model(adaptables = { SlingHttpServletRequest.class, Resource.class })
+//@Model(adaptables = { SlingHttpServletRequest.class, Resource.class })
+@Model(adaptables=SlingHttpServletRequest.class)
 public class IdentiteModelHttp {
-	
-	
+
 	private static final Logger LOGGER = LoggerFactory.getLogger(IdenditeModel.class);
 
     @Self
@@ -28,10 +27,9 @@ public class IdentiteModelHttp {
     public String  getMessageDisplay (){
     
     Map<String, String[]> mapParam = request.getParameterMap();
-    	LOGGER.debug("{} , ------------------ IDENTITE -------------------------",				mapParam.get("toto"));
+    	LOGGER.debug("{} , IDENTITE ",mapParam.get("toto"));
 		return String.format("BienVennue : %s  dans la formation AEM", mapParam.get("toto"));
 	}
-    	
     
 
 }
