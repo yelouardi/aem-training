@@ -17,11 +17,15 @@ OSGI (Le noyeau)
             - Les bugs sont détectés plus tôt
             - Le moteur OSGI permet de voir en direct quels sont les composants actifs et visualiser les dépendances entre eux.
 
+https://t-templier.developpez.com/tutoriel/java/osgi/osgi1/
+
 Apache Felix (Son implémentation dans AEM)
 --------------
         Qui est l'implémentation de la plateforme OSGI dans AEM, fournissant une console d’administration 
         et une API permettant notamment de créer facilement des bundles OSGI et d’interagir avec 
         le code déployés (notions de servlets, de services, etc.).
+        
+https://www.slideshare.net/mikeyhendy/adobe-meetup-aem-architecture-sydney-2015 
 
 JCR (Le noyeau) 
 -----
@@ -30,12 +34,16 @@ JCR (Le noyeau)
         Java Content Repository est un espace de stockage de données semi-structuré sous la forme d’une arborescence de nœuds. 
         Chaque élément (Item) est soit un nœud (Node), soit une propriété (Property). Une Property stocke l’information
          (nom et valeur associée). Un Node structure le contenu.
+         
+https://www.slideshare.net/bdelacretaz/rapid-jcr-applications-development-with-sling-1196003 
 
 Apache Jackrabbit Oak (Son implémentation dans AEM)
 -----------------------
         C'est l'implémentation du JCR dans AEM (Dpuis la version : AEM6.1). Les versions précédentes (depuis la version 5.6),                   utilisaient Adobe CRX.
         Oak et CRX apportent notamment une API pour interagir plus facilement avec JCR.
 
+ https://www.slideshare.net/ehsavoie/java-content-repository-avec-jackrabbit?qid=fd039c36-2f39-4b6d-85fd-ba71baebd8a5&v=&b=&from_search=3
+ 
 Apache  Sling 
 ---------------
         Est un framework pour les applications web RESTful basé sur un arbre de contenu extensible. Il a pour principale fonction d'exposer nos resources disponibles dans notre référentiel: Java Content Repository (JCR).
@@ -52,11 +60,7 @@ Apache  Sling
             - Communication sans état (stateless). REST est lui-même stateless,
              il n’utilise pas de cookies et ses clients doivent se ré-authentifier à chaque requête.
 
-
-
-https://www.slideshare.net/mikeyhendy/adobe-meetup-aem-architecture-sydney-2015
-
-
+https://sling.apache.org/documentation/tutorials-how-tos.html https://sling.apache.org/docs/ApacheConEU08_JCR_Meetup_Sling_Architecture.pdf
 
 Environments
 ============
