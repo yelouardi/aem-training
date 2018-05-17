@@ -7,8 +7,9 @@ Granit
 
  AEM ce compose d’une série des Frameworks Open Source comme : 
 
+
 OSGI (Le noyeau) 
-----
+-----
         est une plateforme Java permettant d’installer, démarrer, modifier des composants de code, nommés « bundles », à chaud, c’est-à-dire sans redémarrer le serveur.
         Une solution OSGI apporte de nombreux bénéfices :
             - Le code devient plus facile à écrire et à tester grâce au découpage en composants
@@ -16,6 +17,8 @@ OSGI (Le noyeau)
             - Les déploiements de bundles sont aisés (fichiers Zip normés à installer via une console d’administration
             - Les bugs sont détectés plus tôt
             - Le moteur OSGI permet de voir en direct quels sont les composants actifs et visualiser les dépendances entre eux.
+
+https://t-templier.developpez.com/tutoriel/java/osgi/osgi1/
 
 https://t-templier.developpez.com/tutoriel/java/osgi/osgi1/
 
@@ -39,7 +42,7 @@ https://www.slideshare.net/bdelacretaz/rapid-jcr-applications-development-with-s
 
 Apache Jackrabbit Oak (Son implémentation dans AEM)
 -----------------------
-        C'est l'implémentation du JCR dans AEM (Dpuis la version : AEM6.1). Les versions précédentes (depuis la version 5.6),                   utilisaient Adobe CRX.
+        C'est l'implémentation du JCR dans AEM (Dpuis la version : AEM6.1). Les versions précédentes (depuis la version 5.6) utilisaient Adobe CRX.
         Oak et CRX apportent notamment une API pour interagir plus facilement avec JCR.
 
  https://www.slideshare.net/ehsavoie/java-content-repository-avec-jackrabbit?qid=fd039c36-2f39-4b6d-85fd-ba71baebd8a5&v=&b=&from_search=3
