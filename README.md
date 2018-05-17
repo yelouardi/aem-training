@@ -7,9 +7,38 @@ Granit
 
  AEM ce compose d’une série des Frameworks Open Source comme : 
 
+OSGI (Le noyeau) 
+----
+        est une plateforme Java permettant d’installer, démarrer, modifier des composants de code, nommés « bundles », à chaud, c’est-à-dire sans redémarrer le serveur.
+        Une solution OSGI apporte de nombreux bénéfices :
+            - Le code devient plus facile à écrire et à tester grâce au découpage en composants
+            - La réutilisation de composants est améliorée (facilité d’utilisation)
+            - Les déploiements de bundles sont aisés (fichiers Zip normés à installer via une console d’administration
+            - Les bugs sont détectés plus tôt
+            - Le moteur OSGI permet de voir en direct quels sont les composants actifs et visualiser les dépendances entre eux.
+
+Apache Felix (Son implémentation dans AEM)
+--------------
+        Qui est l'implémentation de la plateforme OSGI dans AEM, fournissant une console d’administration 
+        et une API permettant notamment de créer facilement des bundles OSGI et d’interagir avec 
+        le code déployés (notions de servlets, de services, etc.).
+
+JCR (Le noyeau) 
+-----
+        Gestion des contenus : Java Content Repository 'API d'entrepôt documentaire standard appelée aussi JSR 283 
+        (anciennement appelée JSR 170).
+        Java Content Repository est un espace de stockage de données semi-structuré sous la forme d’une arborescence de nœuds. 
+        Chaque élément (Item) est soit un nœud (Node), soit une propriété (Property). Une Property stocke l’information
+         (nom et valeur associée). Un Node structure le contenu.
+
+Apache Jackrabbit Oak (Son implémentation dans AEM)
+-----------------------
+        C'est l'implémentation du JCR dans AEM (Dpuis la version : AEM6.1). Les versions précédentes (depuis la version 5.6),                   utilisaient Adobe CRX.
+        Oak et CRX apportent notamment une API pour interagir plus facilement avec JCR.
+
 Apache  Sling 
 ---------------
-        Est un framework pour les applications web RESTful basé sur un arbre de contenu extensible.
+        Est un framework pour les applications web RESTful basé sur un arbre de contenu extensible. Il a pour principale fonction d'exposer nos resources disponibles dans notre référentiel: Java Content Repository (JCR).
         Sling mappe les URL de requête HTTP aux ressources de contenu en fonction du chemin, de l'extension et des sélecteurs de la requête. 
         Les principes d’une architecture Web RESTful sont :
             - Orienté ressources : chaque bribe d’informations comme un libellé, une actualité, une description de produit,
@@ -23,34 +52,6 @@ Apache  Sling
             - Communication sans état (stateless). REST est lui-même stateless,
              il n’utilise pas de cookies et ses clients doivent se ré-authentifier à chaque requête.
 
-JCR 
------
-        Gestion des contenus : Java Content Repository 'API d'entrepôt documentaire standard appelée aussi JSR 283 
-        (anciennement appelée JSR 170).
-        Java Content Repository est un espace de stockage de données semi-structuré sous la forme d’une arborescence de nœuds. 
-        Chaque élément (Item) est soit un nœud (Node), soit une propriété (Property). Une Property stocke l’information
-         (nom et valeur associée). Un Node structure le contenu.
-
-Apache Jackrabbit Oak 
------------------------
-        comme implémentation de JCR. Les versions précédentes,jusqu’à la version 5.6, utilisaient Adobe CRX.
-         Oak et CRX apportent notamment une API pour interagir plus facilement avec JCR.
- 
-OSGI
-----
-        est une plateforme Java permettant d’installer, démarrer, modifier des composants de code, nommés « bundles », à chaud, c’est-à-dire sans redémarrer le serveur.
-        Une solution OSGI apporte de nombreux bénéfices :
-            - Le code devient plus facile à écrire et à tester grâce au découpage en composants
-            - La réutilisation de composants est améliorée (facilité d’utilisation)
-            - Les déploiements de bundles sont aisés (fichiers Zip normés à installer via une console d’administration
-            - Les bugs sont détectés plus tôt
-            - Le moteur OSGI permet de voir en direct quels sont les composants actifs et visualiser les dépendances entre eux.
-
-Apache Felix
---------------
-        qui est une implémentation de la plateforme OSGI fournissant une console d’administration 
-        et une API permettant notamment de créer facilement des bundles OSGI et d’interagir avec 
-        le code déployés (notions de servlets, de services, etc.).
 
 
 https://www.slideshare.net/mikeyhendy/adobe-meetup-aem-architecture-sydney-2015
