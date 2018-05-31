@@ -9,6 +9,7 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
+        
         stage('Sonar'){
         try {
             sh "mvn sonar:sonar"
@@ -16,5 +17,6 @@ pipeline {
             echo "The sonar server could not be reached ${error}"
         }
      }
+        
     }
 }
