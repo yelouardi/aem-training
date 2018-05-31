@@ -11,12 +11,10 @@ pipeline {
         }
         
         stage('Sonar'){
-        try {
-            sh "mvn sonar:sonar"
-        } catch(error){
-            echo "The sonar server could not be reached ${error}"
-        }
-     }
+         steps {
+                sh 'mvn sonar:sonar'
+          }
+      }
         
     }
 }
