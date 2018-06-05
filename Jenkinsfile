@@ -6,18 +6,18 @@ pipeline {
     stages {
         stage('Checkout Git') {
             steps {
-              git branch: tp4, credentialsId: 'GIT_YASSINE', url: https://github.com/yelouardi/aem-training.git
+              git branch: 'tp4', credentialsId: 'GIT_YASSINE', url: 'https://github.com/yelouardi/aem-training.git'
             }
         }
         stage('Build') {
             steps {
-                bat 'mvn clean install'
+                sh 'mvn clean install'
             }
         }
         
         stage('Sonar'){
          steps {
-                bat 'mvn sonar:sonar  -Dsonar.host.url=http://sonar-1456940134.eu-west-1.elb.amazonaws.com  -Dsonar.login=85e4eeca1682a1736fe125a915fda46fd0d583ba'
+                sh 'mvn sonar:sonar  -Dsonar.host.url=http://sonar-1456940134.eu-west-1.elb.amazonaws.com  -Dsonar.login=85e4eeca1682a1736fe125a915fda46fd0d583ba'
           }
       }
         
