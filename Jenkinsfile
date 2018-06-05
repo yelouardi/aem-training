@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Checkout Git') {
             steps {
-              git branch: 'master', credentialsId: 'GIT_YASSINE', url: 'https://github.com/yelouardi/aem-tu.git'
+              git branch: ${params.branch}, credentialsId: ${params.credentialsId}, url: ${params.url}
             }
         }
         stage('Build') {
