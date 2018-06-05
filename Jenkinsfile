@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Checkout Git') {
             steps {
-              git branch: ${params.branch}, credentialsId: ${params.credentialsId}, url: ${params.url}
+              git branch: '${branch}', credentialsId: '${credentialsId}', url: '${url}'
             }
         }
         stage('Build') {
