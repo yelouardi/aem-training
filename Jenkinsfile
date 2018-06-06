@@ -3,6 +3,13 @@ pipeline {
     tools {
         maven 'maven-3-5-3'
     }
+    environment {
+        releaseProjectCmd = "clean jgitflow:release-start "+
+			    "-DdevelopmentVersion=${developmentVersionParam} "+
+			    "-DreleaseVersion=${releaseVersionParam} "+
+			    "-DlocalOnly=true -Doffline=true"
+   }
+
     stages {
         stage('Checkout Git') {
             steps {
@@ -17,11 +24,6 @@ pipeline {
         
          stage('Relase Start') {
             steps {
-                 def releaseProjectCmd = "clean jgitflow:release-start "+
-			    "-DdevelopmentVersion=${developmentVersionParam} "+
-			    "-DreleaseVersion=${releaseVersionParam} "+
-			    "-DlocalOnly=true -Doffline=true"
-
 	            withCredentials([[$class: 'UsernamePasswordMultiBinding',
 	            credentialsId: ${credentialsId},
                 usernameVariable: 'USER_GIT',
