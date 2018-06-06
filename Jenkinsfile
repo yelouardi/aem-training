@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Checkout Git') {
             steps {
-              git branch: '${branch}', credentialsId: 'GIT_YASSINE', url: '${url}'
+              git branch: '${branch}', credentialsId: 'GIT_AEM', url: '${url}'
             }
         }
         stage('Build') {
@@ -25,7 +25,7 @@ pipeline {
         
         stage('Push Release '){
          steps {
-		 withCredentials([usernamePassword(credentialsId: 'GIT_YASSINE', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+		 withCredentials([usernamePassword(credentialsId: 'GIT_AEM', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
 		 sh 'git remote set-url origin {GIT_USERNAME}:${GIT_PASSWORD}@${url}'	 
 		 sh 'git push --set-upstream origin release-${releaseVersionParam}'
 		}
