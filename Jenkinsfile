@@ -18,6 +18,7 @@ pipeline {
         
          stage('Relase Start') {
             steps {
+		    sh 'git merge --abort'
 		    sh 'git branch -d release-1.1.0'
 	            sh 'mvn clean jgitflow:release-start -DdevelopmentVersion=${developmentVersionParam} -DreleaseVersion=${releaseVersionParam} -DlocalOnly=true -Doffline=true'
                 }
