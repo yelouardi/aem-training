@@ -18,7 +18,7 @@ pipeline {
         
          stage('Relase Start') {
             steps {
-		    sh 'git branch -d release-1.0.0'
+		    sh 'git branch -d release-1.1.0'
 	            sh 'mvn clean jgitflow:release-start -DdevelopmentVersion=${developmentVersionParam} -DreleaseVersion=${releaseVersionParam} -DlocalOnly=true -Doffline=true'
                 }
             }
@@ -26,7 +26,7 @@ pipeline {
         stage('Push Release '){
          steps {
                 sh 'git push origin ${branch}'
-	            sh 'git push origin release-${releaseVersionParam}'
+	            sh 'git push --set-upstream origin release-${releaseVersionParam}'
           }
       }
         
