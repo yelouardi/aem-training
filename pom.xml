@@ -124,6 +124,21 @@
         <pluginManagement>
             <plugins>
                 <plugin>
+    <groupId>external.atlassian.jgitflow</groupId>
+    <artifactId>jgitflow-maven-plugin</artifactId>
+    <version>1.0-m4.3</version>
+    <configuration>
+        <flowInitContext>
+            <masterBranchName>release</masterBranchName>
+            <developBranchName>master</developBranchName>
+            <releaseBranchPrefix>release-</releaseBranchPrefix>
+            <versionTagPrefix>release-</versionTagPrefix>
+        </flowInitContext>
+        <noReleaseMerge>true</noReleaseMerge>
+    </configuration>
+</plugin>
+                
+                <plugin>
                     <groupId>org.apache.felix</groupId>
                     <artifactId>maven-scr-plugin</artifactId>
                     <version>1.7.4</version>
