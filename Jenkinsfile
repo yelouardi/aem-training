@@ -26,7 +26,7 @@ pipeline {
         stage('Push Release '){
          steps {
 		 withCredentials([usernamePassword(credentialsId: '${credentialsId}', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
-		 sh 'git remote set-url origin ${PROTOCOL_URL_VSTS}${USER_VSTS}:${PWD_VSTS}@${url}'	 
+		 sh 'git remote set-url origin {GIT_USERNAME}:${GIT_PASSWORD}@${url}'	 
 		 sh 'git push --set-upstream origin release-${releaseVersionParam}'
 		}
           }
