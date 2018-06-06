@@ -28,7 +28,7 @@ pipeline {
                 passwordVariable: 'PWD_GIT']]) {
                 sh "${releaseProjectCmd}"
                 sh "git remote set-url origin ${USER_GIT}:${PWD_GIT}@${PREFIX_URL_VSTS}/${url}"
-	
+                }
             }
         }
         
