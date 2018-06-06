@@ -3,9 +3,6 @@ pipeline {
     tools {
         maven 'maven-3-5-3'
     }
-    environment {
-        releaseProjectCmd = 'sh mvn clean jgitflow:release-start -DdevelopmentVersion=${developmentVersionParam} -DreleaseVersion=${releaseVersionParam} -DlocalOnly=true -Doffline=true'
-   }
 
     stages {
         stage('Checkout Git') {
@@ -24,7 +21,6 @@ pipeline {
 	            sh 'mvn clean jgitflow:release-start -DdevelopmentVersion=${developmentVersionParam} -DreleaseVersion=${releaseVersionParam} -DlocalOnly=true -Doffline=true'
                 }
             }
-        }
         
         stage('Push Release '){
          steps {
