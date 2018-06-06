@@ -24,8 +24,8 @@ pipeline {
         
         stage('Push Release '){
          steps {
-                sh "git push origin develop"
-	            sh "git push origin release-${releaseVersionParam}"
+                sh 'git push origin ${branch}'
+	            sh 'git push origin release-${releaseVersionParam}'
           }
       }
         
