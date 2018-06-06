@@ -2,7 +2,6 @@ pipeline {
     agent any
      parameters {
             choice(name: 'Invoke_Parameters', choices:"Yes\nNo", description: "Do you whish to do a dry run to grab parameters?" )
-            choice(name: 'Nodes', choices:"${nodes}", description: "")
     }
     tools {
         maven 'maven-3-5-3'
