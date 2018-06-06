@@ -31,7 +31,7 @@ pipeline {
 		        sh 'git push origin master'
                 //tags
 		        sh 'git push origin --tags'
-                sh 'git push origin --delete ${releaseToFinish}''
+                sh 'git push origin --delete ${releaseToFinish}'
 
 		}
           }
