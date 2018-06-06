@@ -4,10 +4,7 @@ pipeline {
         maven 'maven-3-5-3'
     }
     environment {
-        releaseProjectCmd = "clean jgitflow:release-start "+
-			    "-DdevelopmentVersion=${developmentVersionParam} "+
-			    "-DreleaseVersion=${releaseVersionParam} "+
-			    "-DlocalOnly=true -Doffline=true"
+        releaseProjectCmd = 'sh mvn clean jgitflow:release-start -DdevelopmentVersion=${developmentVersionParam} -DreleaseVersion=${releaseVersionParam} -DlocalOnly=true -Doffline=true'
    }
 
     stages {
@@ -24,12 +21,7 @@ pipeline {
         
          stage('Relase Start') {
             steps {
-	            withCredentials([[$class: 'UsernamePasswordMultiBinding',
-	            credentialsId: ${credentialsId},
-                usernameVariable: 'USER_GIT',
-                passwordVariable: 'PWD_GIT']]) {
-                sh "${releaseProjectCmd}"
-                sh "git remote set-url origin ${USER_GIT}:${PWD_GIT}@${PREFIX_URL_VSTS}/${url}"
+	            sh 'mvn clean jgitflow:release-start -DdevelopmentVersion=${developmentVersionParam} -DreleaseVersion=${releaseVersionParam} -DlocalOnly=true -Doffline=true'
                 }
             }
         }
