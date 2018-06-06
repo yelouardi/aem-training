@@ -1,5 +1,9 @@
 pipeline {
     agent any
+     parameters {
+            choice(name: 'Invoke_Parameters', choices:"Yes\nNo", description: "Do you whish to do a dry run to grab parameters?" )
+            choice(name: 'Nodes', choices:"${nodes}", description: "")
+    }
     tools {
         maven 'maven-3-5-3'
     }
@@ -17,11 +21,12 @@ pipeline {
         }
         
          stage('Delete Relase Branch') {
-             when {
-		     expression { ${removeBranch} == true}
-            }
             steps {
-		        sh 'git branch -D ${releaseVersionParam}'
+                script {
+                    if ("${params.Invoke_Parameters}" == "Yes") {
+		                sh 'git branch -D ${releaseVersionParam}'
+                        }
+                    }
                 }
             }
 
