@@ -1,8 +1,5 @@
 pipeline {
     agent any
-     parameters {
-            choice(name: 'Invoke_Parameters', choices:"Yes\nNo", description: "Do you whish to do a dry run to grab parameters?" )
-    }
     tools {
         maven 'maven-3-5-3'
     }
@@ -10,7 +7,7 @@ pipeline {
     stages {
         stage('Checkout Git') {
             steps {
-              git branch: '${branch}', credentialsId: 'GIT_AEM', url: 'https://${url}'
+              git branch: '${releaseToFinish}', credentialsId: 'GIT_AEM', url: 'https://${url}'
             }
         }
         stage('Build') {
@@ -19,19 +16,9 @@ pipeline {
             }
         }
         
-         stage('Delete Relase Branch') {
+         stage('Relase Finish') {
             steps {
-                script {
-                    if ("${params.Invoke_Parameters}" == "Yes") {
-		                sh 'git branch -D release-${releaseVersionParam}'
-                        }
-                    }
-                }
-            }
-
-         stage('Relase Start') {
-            steps {
-	            sh 'mvn clean jgitflow:release-start -DdevelopmentVersion=${developmentVersionParam} -DreleaseVersion=${releaseVersionParam} -DlocalOnly=true -Doffline=true'
+	            sh 'mvn clean jgitflow:release-finish'
                 }
             }
         
@@ -39,7 +26,13 @@ pipeline {
             steps {
 		       withCredentials([usernamePassword(credentialsId: 'GIT_AEM', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
 		        sh 'git remote set-url origin https://${GIT_USERNAME}:${GIT_PASSWORD}@${url}'	 
-		        sh 'git push --set-upstream origin release-${releaseVersionParam}'
+                sh 'git push origin develop'
+		        //merge master
+		        sh 'git push origin master'
+                //tags
+		        sh 'git push origin --tags'
+                sh 'git push origin --delete ${releaseToFinish}''
+
 		}
           }
       }
