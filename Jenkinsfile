@@ -25,7 +25,7 @@ pipeline {
         
         stage('Push Release '){
          steps {
-                sh 'git push origin ${branch}'
+                    sh 'git push origin ${branch}'
 	            sh 'git push --set-upstream origin release-${releaseVersionParam}'
           }
       }
