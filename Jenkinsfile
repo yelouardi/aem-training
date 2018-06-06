@@ -26,7 +26,7 @@ pipeline {
         stage('Push Release '){
          steps {
 		 withCredentials([usernamePassword(credentialsId: 'GIT_AEM', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
-		 sh 'git remote set-url origin {GIT_USERNAME}:${GIT_PASSWORD}@${url}'	 
+		 sh 'git remote set-url origin ${GIT_USERNAME}:${GIT_PASSWORD}@${url}'	 
 		 sh 'git push --set-upstream origin release-${releaseVersionParam}'
 		}
           }
