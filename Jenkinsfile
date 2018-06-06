@@ -15,9 +15,27 @@ pipeline {
             }
         }
         
-        stage('Sonar'){
+         stage('Relase Start') {
+            steps {
+                 def releaseProjectCmd = "clean jgitflow:release-start "+
+			    "-DdevelopmentVersion=${developmentVersionParam} "+
+			    "-DreleaseVersion=${releaseVersionParam} "+
+			    "-DlocalOnly=true -Doffline=true"
+
+	            withCredentials([[$class: 'UsernamePasswordMultiBinding',
+	            credentialsId: ${credentialsId},
+                usernameVariable: 'USER_GIT',
+                passwordVariable: 'PWD_GIT']]) {
+                sh "${releaseProjectCmd}"
+                sh "git remote set-url origin ${USER_GIT}:${PWD_GIT}@${PREFIX_URL_VSTS}/${url}"
+	
+            }
+        }
+        
+        stage('Push Release '){
          steps {
-                sh 'mvn sonar:sonar  -Dsonar.host.url=$GLOBAL_SONAR_URL -Dsonar.login=$GLOBAL_SONAR_LOGIN'
+                sh "git push origin develop"
+	            sh "git push origin release-${releaseVersionParam}"
           }
       }
         
