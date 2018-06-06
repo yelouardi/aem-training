@@ -23,7 +23,7 @@ pipeline {
             steps {
                 script {
                     if ("${params.Invoke_Parameters}" == "Yes") {
-		                sh 'git branch -D ${releaseVersionParam}'
+		                sh 'git branch -D release-${releaseVersionParam}'
                         }
                     }
                 }
@@ -31,7 +31,6 @@ pipeline {
 
          stage('Relase Start') {
             steps {
-		        sh 'git branch -D release-1.1.0'
 	            sh 'mvn clean jgitflow:release-start -DdevelopmentVersion=${developmentVersionParam} -DreleaseVersion=${releaseVersionParam} -DlocalOnly=true -Doffline=true'
                 }
             }
